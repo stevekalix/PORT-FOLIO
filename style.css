@@ -1,0 +1,108 @@
+/* Reset and base layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background:;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  border-width:2px;
+  border-style:solid;
+  border-color:aqua;
+  border-radius:25px;
+
+}
+body{
+    margin:50px;
+}
+
+/* Flex container that centers everything */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+  padding: 20px;
+}
+
+/* Animated background */
+.animated-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(80deg, #f5f2f2, #92918d, #08090a, #e0dada);
+  background-size: 400% 400%;
+  animation: animateBackground 18s ease infinite;
+  z-index: 0;
+  border-radius:25px;
+}
+
+@keyframes animateBackground {
+  0% { background-position: 0% 90%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Animated text */
+.text {
+  font-size: 3em;
+  color:white;
+  padding:2cm;
+  background-color:black;
+  transform: background-color 0.10s;
+}
+.text:hover{
+    color:blueviolet;
+    cursor:no-drop;
+    height:7cm;
+    padding-bottom:2cm;
+
+}
+
+.card {
+  border: 2px solid black;
+  padding: 30px;
+  width: 95%;
+  max-width:;
+  margin-left:3cm;
+  background-color:black;
+  box-shadow:black 10px 10px 50px;
+  z-index: 2;
+  border-radius: 15px;
+  margin-top: 20px;
+  color: white;
+}
+.card1{
+    max-width: fit-content;
+    height:50%;
+    background-color:none;
+    margin-left:3cm;
+    margin-top:2cm;
+    padding:4cm;
+    font-size:3em;
+    border-radius:25px;
+    box-shadow: #08090a 10px 22px 20px;
+}
+a {
+  color:black;
+  text-decoration: none;
+  transition: color 0.1s ease;
+}
+
+a:hover {
+  color:blueviolet;
+  max-width:max-content;
+  max-height:max-content;
+  background-color:black;
+  border-color: #000;
+  text-decoration: none; 
+  cursor:progress;
+}
